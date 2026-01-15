@@ -137,10 +137,17 @@ I used a hybrid human + AI workflow for development:
   - Speeding up repetitive UI layout creation
   - Suggesting solutions for errors and logs
   - Writing shareable card generation logic
+  - 
+  AI-Powered Features (DeepSeek Integration)
+  AI Quote Generation: Generate custom quotes based on mood, topic, or inspiration
+  Smart Recommendations: Personalized quote suggestions using AI
+  Quote Analysis: Deep insights into quote meaning and context
+  Language Translation: Translate quotes to multiple languages
+  Quote Expansion: Get detailed explanations and interpretations
   
 - **Material Design Builder** for UI inspiration
 - **GitHub Copilot** (optional) for in-editor suggestions
-- **Figma/Canva** for theme references and design mockups
+- **Stitch** for theme references and design mockups
 
 ### **Development Approach:**
 1. Start with core architecture (MVVM, Retrofit, Supabase)

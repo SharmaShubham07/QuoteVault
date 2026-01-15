@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- App Settings Header -->
+    <TextView
+        android:text="App Settings"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textColor="?attr/colorOnBackground" />
+
+    <!-- Theme Switch Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:background="?attr/colorSurface"
+        android:gravity="center_vertical"
+        android:backgroundTint="?attr/colorSurface">
+
+        <TextView
+            android:text="Theme"
+            android:textSize="16sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="?attr/colorOnSurface" />
+
+        <Switch
+            android:id="@+id/switchTheme"
+            android:text="Dark Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurface"
+            android:showText="false"
+            android:contentDescription="Toggle dark mode theme" />
+
+    </LinearLayout>
+
+    <!-- Accent Color Section -->
+    <TextView
+        android:text="Accent Color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:textColor="?attr/colorOnBackground" />
+
+    <RadioGroup
+        android:id="@+id/rgAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:background="?attr/colorSurface"
+        android:backgroundTint="?attr/colorSurface">
+
+        <RadioButton
+            android:id="@+id/rbBlue"
+            android:text="Blue (Default)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textColor="?attr/colorOnSurface" />
+
+        <RadioButton
+            android:id="@+id/rbRed"
+            android:text="Red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textColor="?attr/colorOnSurface" />
+
+        <RadioButton
+            android:id="@+id/rbGreen"
+            android:text="Green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurface" />
+
+    </RadioGroup>
+
+    <!-- Font Size Section -->
+    <TextView
+        android:text="Font Size"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:textColor="?attr/colorOnBackground" />
+
+    <SeekBar
+        android:id="@+id/fontSeekBar"
+        android:max="20"
+        android:min="12"
+        android:progress="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Adjust font size"
+        android:progressTint="?attr/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:text="Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:text="Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+    </LinearLayout>
+
+    <!-- Font Preview -->
+    <TextView
+        android:id="@+id/tvFontPreview"
+        android:text="The quick brown fox jumps over the lazy dog"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="?attr/colorOnBackground"
+        android:background="@android:color/transparent"
+        android:padding="16dp" />
+
+    <!-- Sync Button -->
+    <Button
+        android:id="@+id/btnSaveCloud"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Sync to Cloud"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:drawablePadding="12dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:gravity="center"
+        android:contentDescription="Sync settings to cloud storage" />
+
+    <!-- Version Info -->
+    <TextView
+        android:text="App Version 1.0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="12sp"
+        android:textColor="?attr/colorOnSurfaceVariant" />
+
+</LinearLayout>

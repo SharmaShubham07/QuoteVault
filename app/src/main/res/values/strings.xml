@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QuoteVault</string>
+    <string name="quote_text_format">“%1$s”</string>
+</resources>

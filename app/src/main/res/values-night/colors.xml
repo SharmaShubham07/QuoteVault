@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Brand Colors -->
+    <color name="purplePrimary">#B388FF</color>
+    <color name="purpleSecondary">#D1A7FF</color>
+
+    <!-- Gradient Background Colors -->
+    <color name="gradientStart">#1F1A2E</color>
+    <color name="gradientEnd">#2B1E3F</color>
+
+    <!-- Text Colors -->
+    <color name="black">#FFFFFF</color>
+    <color name="grayDark">#CFCFCF</color>
+    <color name="grayLight">#4A4A4A</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Input Background -->
+    <color name="inputBg">#2A2A2A</color>
+
+    <!-- Button Colors -->
+    <color name="primaryButton">#B388FF</color>
+
+    <!-- Icon Tint -->
+    <color name="iconPurple">#B388FF</color>
+    <color name="iconGray">#B1B1B1</color>
+
+</resources>

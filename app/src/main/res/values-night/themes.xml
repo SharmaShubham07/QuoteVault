@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base Dark Theme -->
+    <style name="Base.Theme.BrewAppsAssignment" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Dark Mode Colors -->
+        <item name="colorPrimary">@color/purplePrimary</item>
+        <item name="colorPrimaryVariant">@color/purpleSecondary</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+
+        <!-- Button Dark Style -->
+        <item name="materialButtonStyle">@style/PrimaryButtonStyleDark</item>
+    </style>
+
+    <style name="Theme.BrewAppsAssignment" parent="Base.Theme.BrewAppsAssignment" />
+
+</resources>

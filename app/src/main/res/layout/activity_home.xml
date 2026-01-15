@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- MAIN SCREEN CONTENT -->
+        <LinearLayout
+            android:id="@+id/mainContent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNavBar">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvAppTitle"
+                    android:text="QuoteVault"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:src="@drawable/ic_search"
+                    android:visibility="gone"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
+
+            <!-- SEARCH -->
+            <EditText
+                android:id="@+id/etSearch"
+                android:hint="Search quotes..."
+                android:padding="14dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_search"
+                android:drawableStart="@drawable/ic_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- QUOTE OF THE DAY -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQotd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/bg_gradient_qotd"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvQotdTitle"
+                        android:text="✨ QUOTE OF THE DAY"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvQotdText"
+                        android:layout_marginTop="12dp"
+                        android:text="Loading..."
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvQotdAuthor"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:text="— Author"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/btnShareQotd"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_button_transparent"
+                        android:layout_gravity="end"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/ic_share"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp" />
+
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:text="Share"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- CATEGORY TITLE -->
+            <TextView
+                android:text="EXPLORE CATEGORIES"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/grayDark"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <HorizontalScrollView
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/categoryContainer"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </HorizontalScrollView>
+
+            <!-- SECTION TITLE -->
+            <LinearLayout
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="Recent Inspiration"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvViewAll"
+                    android:text="View all"
+                    android:textColor="@color/purplePrimary"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- LIST -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQuotes"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- BOTTOM NAVIGATION -->
+        <include
+            android:id="@+id/bottomNavBar"
+            layout="@layout/bottom_nav_menu"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Colors -->
+    <color name="purplePrimary">#5A00FF</color>
+    <color name="purpleSecondary">#7A3CFF</color>
+
+    <!-- Gradient Background Colors -->
+    <color name="gradientStart">#DDE4FF</color>
+    <color name="gradientEnd">#F3DFFF</color>
+
+    <!-- Text Colors -->
+    <color name="black">#1A1A1A</color>
+    <color name="grayDark">#6F6F6F</color>
+    <color name="grayLight">#E3E3E3</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Input Background -->
+    <color name="inputBg">#FFFFFFFF</color>
+
+    <!-- Button Colors -->
+    <color name="primaryButton">#5A00FF</color>
+
+    <!-- Icon Tint -->
+    <color name="iconPurple">#5A00FF</color>
+    <color name="iconGray">#9E9E9E</color>
+
+    <!-- BLUE -->
+    <color name="blue_primary">#2962FF</color>
+    <color name="blue_accent">#448AFF</color>
+    <color name="blue_dark">#0039CB</color>
+
+    <color name="card_style_minimal_dark">#1A1A1A</color>
+    <color name="card_style_modern_blue">#2196F3</color>
+
+    <color name="card_style_1">#2196F3</color>
+    <color name="card_style_dark">#1A237E</color>
+
+    <!-- RED -->
+    <color name="red_primary">#D32F2F</color>
+    <color name="red_accent">#FF5252</color>
+    <color name="red_dark">#9A0007</color>
+
+    <!-- GREEN -->
+    <color name="green_primary">#388E3C</color>
+    <color name="green_accent">#69F0AE</color>
+    <color name="green_dark">#00600F</color>
+
+</resources>

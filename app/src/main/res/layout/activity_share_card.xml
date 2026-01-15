@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Quote Card Preview -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPreview"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginBottom="32dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/card_style_1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="32dp">
+
+                <!-- Quote Icon Top Left -->
+                <ImageView
+                    android:id="@+id/ivQuoteIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_quote"
+                    app:tint="@android:color/white"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:alpha="0.7" />
+
+                <!-- Quote Text -->
+                <TextView
+                    android:id="@+id/tvQuote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The only way to do great work is to love what you do."
+                android:textSize="22sp"
+                android:textStyle="italic"
+                android:textColor="@android:color/white"
+                android:lineSpacingExtra="4sp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+                <!-- Author -->
+                <TextView
+                    android:id="@+id/tvAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="— Steve Jobs"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginEnd="24dp" />
+
+                <!-- Category Badge -->
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INSPIRATION"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_category_badge"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="12dp"
+                    android:letterSpacing="0.1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginStart="24dp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card Style Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Style: Modern Blue"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChooseStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:minHeight="56dp"
+                android:text="Choose Style"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/purplePrimary"
+                app:backgroundTint="@android:color/transparent"
+                app:iconGravity="textStart"
+                app:iconTint="@color/purplePrimary"
+                app:strokeColor="@color/purplePrimary"
+                app:strokeWidth="1dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:minHeight="56dp"
+                android:text="Save"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/purplePrimary"
+                app:backgroundTint="@android:color/transparent"
+                app:iconGravity="textStart"
+                app:iconTint="@color/purplePrimary"
+                app:strokeColor="@color/purplePrimary"
+                app:strokeWidth="1dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShare"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="56dp"
+                android:text="Share"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="@color/purplePrimary"
+                app:backgroundTint="@android:color/transparent"
+                app:iconGravity="textStart"
+                app:iconTint="@color/purplePrimary"
+                app:strokeColor="@color/purplePrimary"
+                app:strokeWidth="1dp"/>
+
+        </LinearLayout>
+
+        <!-- Style Preview Grid -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Styles"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnBackground"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <!-- Style Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Style 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/stylePreview1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/card_style_1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Modern Blue"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Style 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/stylePreview2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    android:background="@drawable/bg_gradient_sunset">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_gradient_sunset"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sunset"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Style Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Style 3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/stylePreview3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/card_style_dark">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Minimal Dark"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Style 4 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/stylePreview4"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    android:background="@drawable/bg_gradient_nature">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_gradient_nature"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nature"
+                            android:textSize="12sp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- View All Styles Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewAllStyles"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="View All Styles"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_expand_more"
+            app:iconGravity="end"
+            app:iconPadding="8dp"
+            app:iconTint="?attr/colorPrimary"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textColor="?attr/colorPrimary"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base Light Theme -->
+    <style name="Base.Theme.BrewAppsAssignment" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/purplePrimary</item>
+        <item name="colorPrimaryVariant">@color/purpleSecondary</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+
+        <!-- Buttons -->
+        <item name="materialButtonStyle">@style/PrimaryButtonStyle</item>
+
+        <!-- Remove material button tint override -->
+        <item name="android:colorButtonNormal">@null</item>
+    </style>
+    <!-- Default Overlay (Blue) -->
+    <style name="ThemeOverlay_Accent_Blue" parent="">
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="colorAccent">@color/blue_accent</item>
+        <item name="colorPrimaryVariant">@color/blue_dark</item>
+    </style>
+
+    <!-- Red Accent -->
+    <style name="ThemeOverlay_Accent_Red" parent="">
+        <item name="colorPrimary">@color/red_primary</item>
+        <item name="colorAccent">@color/red_accent</item>
+        <item name="colorPrimaryVariant">@color/red_dark</item>
+    </style>
+
+    <!-- Green Accent -->
+    <style name="ThemeOverlay_Accent_Green" parent="">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="colorAccent">@color/green_accent</item>
+        <item name="colorPrimaryVariant">@color/green_dark</item>
+    </style>
+
+    <!-- Final App Theme -->
+    <style name="Theme.BrewAppsAssignment" parent="Base.Theme.BrewAppsAssignment" />
+
+</resources>
